@@ -1,0 +1,25 @@
+<style>
+    body{
+        overflow-x: hidden;
+    }
+</style>
+<div class="container py-5 my-5" style="margin-left: 400px;">
+    <div class="card" style="max-width: 500px;padding: 50px;">
+        <% if (successMessage.length > 0) { %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <%- successMessage %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        <% } %>
+        <div class="card-body">
+            <h2 class="card-title">
+              Welcome <%= user %> !
+            </h2>
+            <p>
+                Great job! You're logged in and good to go. Let's make some magic happen in your account.
+            </p>
+
+            <a href="/logout" class="btn btn-danger btn-sm">Logout</a>
+        </div>
+    </div>
+</div>

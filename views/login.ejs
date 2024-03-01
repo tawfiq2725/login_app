@@ -1,0 +1,33 @@
+<style>
+    body{
+        overflow-x: hidden;
+    }
+</style>
+<div class="container py-5 my-5" style="margin-left: 450px;">
+
+    
+    <div class="card" style="max-width: 500px;">
+        <% if (errorMessage.length > 0) { %>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <%- errorMessage %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        <% } %>
+        <% if (successMessage.length > 0) { %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <%- successMessage %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        <% } %>
+        <form action="/login" method="POST" class="card-body">
+            <legend>Login</legend>
+            <hr>
+            <label class="form-label" for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control">
+            <label class="form-label" for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control">
+
+            <button class="py-2 my-3 btn btn-outline-primary" type="submit">Login</button>
+        </form>
+    </div>
+</div>
